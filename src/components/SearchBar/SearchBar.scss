@@ -1,0 +1,99 @@
+.search-bar {
+  width: 100%;
+  cursor: text;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+
+  &__container {
+    position: relative;
+    background-color: rgb(24, 0, 72);
+    z-index: 1;
+    padding: 0.25rem;
+    border-radius: 9999px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 2px solid rgb(88, 64, 255);
+    margin: -0.1rem;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    color: white;
+  }
+
+  &__input {
+    background-color: rgb(24, 0, 72);
+    padding: 0.375rem;
+    flex-grow: 1;
+    outline: none;
+    text-overflow: ellipsis;
+    border: none;
+    color: rgb(255, 255, 255);
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.445);
+    }
+  }
+
+  &__shortcut {
+    margin-right: 0.75rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    cursor: help;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(71, 85, 105, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: rgba(71, 85, 105, 0.5);
+    }
+    border-radius: 0.5rem;
+  }
+
+  &__shortcut-key {
+    border-radius: 0.5rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    margin-top: -2.75rem;
+    width: 100%;
+    z-index: 35;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    padding-right: 0.75rem;
+  }
+
+  &__spacer {
+    width: 100%;
+    height: 1.25rem;
+  }
+
+  &__hidden-element {
+    width: 100%;
+    height: 0.25rem;
+    background-color: #ffffff;
+    display: none;
+
+    &--rounded {
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+    }
+  }
+
+  &__hidden-dropdown {
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    outline: none;
+    padding: 0.5rem;
+    pointer-events: auto;
+  }
+}

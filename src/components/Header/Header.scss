@@ -1,0 +1,257 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(26, 1, 75), rgb(79, 20, 171));
+  color: white;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include desktop {
+    margin: 1rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+    border-radius: 15px;
+    border: 2px solid $neutral-dark;
+    background: rgb(26, 1, 75);
+  }
+
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__app-icon-container {
+    background-color: rgb(81, 57, 237);
+    border-radius: 50%;
+    align-content: center;
+    justify-items: center;
+    display: none;
+    margin: 0 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 2.4rem;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    margin: auto 1rem;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__app-icon {
+    height: 60%;
+    width: 80%;
+  }
+
+  &__user-options {
+    border-top: solid 2px rgb(68, 26, 194);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgb(26, 1, 75), rgb(79, 20, 171));
+    font-size: medium;
+
+    @include desktop {
+      flex-direction: row;
+      width: auto;
+      border: none;
+      position: initial;
+      background: transparent;
+      margin: 0;
+    }
+
+    li {
+      font-size: inherit;
+      border-radius: 25px;
+      text-align: center;
+      font-weight: bold;
+      margin: 0.5rem 1rem 0;
+      border: solid 2px rgb(81, 57, 237);
+      font-size: 0.85rem;
+
+      &:hover {
+        color: rgb(216, 27, 245);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        filter: brightness(1.1);
+        background-color: rgb(81, 57, 237, 0.3);
+      }
+
+      @include desktop {
+        margin: 0 0.5rem;
+        border: solid 2px rgb(81, 57, 237);
+        justify-content: center;
+        min-width: 7rem;
+      }
+    }
+
+    a:nth-child(1) > li {
+      background-color: rgb(81, 57, 237);
+    }
+  }
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 30rem;
+      justify-content: center;
+    }
+  }
+
+  &__country-select {
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    color: white;
+    border: solid 2px rgb(68, 26, 194);
+    border-radius: 15px;
+    padding: 0.4rem 1rem;
+    background-color: rgba(79, 20, 171);
+
+    &:hover {
+      background-color: rgba(68, 26, 194, 0.725);
+    }
+  }
+
+  &__menu-button {
+    font-weight: bold;
+    display: flex;
+    color: white;
+    border: solid 2px rgb(68, 26, 194);
+    border-radius: 15px;
+    padding: 0.5rem 1.2rem;
+    margin: auto 1rem;
+    width: 5rem;
+
+    &:hover {
+      background-color: rgba(68, 26, 194, 0.725);
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: flex;
+    width: 100%;
+  }
+
+  &__nav-container {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-transform: uppercase;
+      padding-left: 2rem;
+    }
+  }
+
+  &__menu-item {
+    font-weight: 400;
+    font-size: large;
+
+    &:hover {
+      color: rgb(143, 129, 184);
+    }
+
+    @include desktop {
+      display: flex;
+      margin: auto 0;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__menu {
+    display: none;
+    width: 100%;
+
+    &--active {
+      text-transform: uppercase;
+      display: flex;
+      position: absolute;
+      height: calc(100vh - 4rem);
+      width: 100%;
+      top: 4rem;
+      left: 0;
+      z-index: 1;
+      padding: 1rem;
+      background: linear-gradient(90deg, rgb(26, 1, 75), rgb(79, 20, 171));
+      z-index: 2;
+
+      ul {
+        width: 100%;
+      }
+
+      li {
+        padding: 0.5rem;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    height: 4rem;
+    scale: 1.1;
+    margin: 0 1rem;
+
+    &--large {
+      display: none;
+      @include tablet {
+        display: flex;
+      }
+    }
+
+    &--small {
+      min-width: 5rem;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+
+    @include desktop {
+      min-width: 9rem;
+      order: -1;
+    }
+  }
+}
