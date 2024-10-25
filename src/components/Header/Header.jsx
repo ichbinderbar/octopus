@@ -61,7 +61,10 @@ export default function Header() {
               </div>
             </ul>
           </nav>
-          <a className="header__logo-container" href="/">
+          <a
+            className="header__logo-container"
+            href="https://electroverse.octopus.energy/"
+          >
             <img
               className="header__logo header__logo--small"
               src={octopusElectroverseLogoNoText}
