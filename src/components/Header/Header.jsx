@@ -45,7 +45,7 @@ export default function Header() {
                 <a href="https://electroverse.octopus.energy/business">
                   <li className="header__menu-item">Business</li>
                 </a>
-                <a href="/map">
+                <a href="https://electroverse.octopus.energy/community">
                   <li className="header__menu-item">Community</li>
                 </a>
                 <a href="https://electroverse.octopus.energy/stats">
