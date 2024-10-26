@@ -54,10 +54,13 @@ export default function Header() {
               </div>
 
               <div className="header__user-options">
-                <a id="signup" href="/signup">
+                <a
+                  id="signup"
+                  href="https://electroverse.octopus.energy/sign-up/magic"
+                >
                   <li className="header__menu-item">Sign Up</li>
                 </a>
-                <a href="/login">
+                <a href="https://electroverse.octopus.energy/log-in">
                   <li className="header__menu-item">Log In</li>
                 </a>
               </div>

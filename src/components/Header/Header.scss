@@ -126,6 +126,10 @@
       max-width: 30rem;
       justify-content: center;
     }
+
+    a:nth-child(1) {
+      color: rgb(216, 27, 245);
+    }
   }
 
   &__country-select {
