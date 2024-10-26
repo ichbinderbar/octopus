@@ -1,0 +1,91 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(26, 1, 75); // Dark purple background color
+
+  &__title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid rgb(88, 64, 255); // Light bluish-purple border color
+    border-radius: 15px;
+    background-color: rgb(24, 0, 72); // Darker purple form background
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(26, 1, 75);
+    border: 2px solid rgb(88, 64, 255); // Light bluish-purple border
+    border-radius: 10px;
+    outline: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(56, 42, 193); // Button background color
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(81, 57, 237); // Hover color for button
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: rgba(56, 42, 193, 0.5);
+    }
+  }
+
+  &__footer {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+  }
+
+  &__link {
+    color: rgb(88, 64, 255);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(143, 129, 184);
+      text-decoration: underline;
+    }
+  }
+}

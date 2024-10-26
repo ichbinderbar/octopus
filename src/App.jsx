@@ -35,11 +35,10 @@ function App() {
             </>
           }
         />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<SignUp />} /> */}
+        <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>

@@ -2,21 +2,42 @@ import "./Login.scss";
 
 export default function Login() {
   return (
-    <div>
-      <h1>Login</h1>
-      <form>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" required />
+    <div className="login">
+      <h1 className="login__title">Login</h1>
+      <form className="login__form">
+        <div className="login__field">
+          <label htmlFor="username" className="login__label">
+            Username:
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            className="login__input"
+          />
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+        <div className="login__field">
+          <label htmlFor="password" className="login__label">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            className="login__input"
+          />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="login__button">
+          Login
+        </button>
       </form>
-      <p>
-        Not a user yet? <a href="/signup">Register here</a>
+      <p className="login__footer">
+        Not a user yet?{" "}
+        <a href="/signup" className="login__link">
+          Register here
+        </a>
       </p>
     </div>
   );
