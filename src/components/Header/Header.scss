@@ -165,6 +165,25 @@
   &__search {
     display: flex;
     width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__search-divider {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      margin: 0.3rem auto;
+    }
+    @include desktop {
+      margin: 0;
+    }
   }
 
   &__nav-container {

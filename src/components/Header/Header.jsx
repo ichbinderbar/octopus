@@ -5,6 +5,8 @@ import octopusElectroverseLogoNoText from "../../assets/images/octopusElectrover
 import CountriesMenu from "../CountriesMenu/CountriesMenu";
 import phoneWithLightning from "../../assets/icons/phoneWithLightning.svg";
 import SearchBar from "../SearchBar/SearchBar";
+import ElectroverseCompatibleButton from "../ElectroverseCompatibleButton/ElectroverseCompatibleButton";
+import RangeSelectorButtonGroup from "../RangeSelectorButtonGroup/RangeSelectorButtonGroup";
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -87,6 +89,10 @@ export default function Header() {
         </div>
         <div className="header__search">
           <SearchBar />
+          <div className="header__search-divider">
+            <ElectroverseCompatibleButton />
+            <RangeSelectorButtonGroup />
+          </div>
         </div>
       </header>
     </>
