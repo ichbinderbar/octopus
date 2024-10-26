@@ -20,18 +20,37 @@
     margin: 0;
     align-items: center;
     gap: 2rem;
+    height: 100%;
 
     li {
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
+      width: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
 
-        &:hover {
-          text-decoration: underline;
-          color: rgb(255, 72, 216);
-        }
+      &:hover {
+        text-decoration: underline;
+        color: rgb(255, 72, 216);
+        cursor: pointer;
       }
+    }
+
+    li:nth-child(1) {
+      margin-top: 0.5rem;
+    }
+
+    li:nth-child(4) {
+      scale: 0.8;
+      position: relative;
+      left: -0.1rem;
+    }
+
+    li:nth-child(6) {
+      scale: 0.9;
+    }
+
+    li:last-child {
+      margin-top: auto;
     }
   }
 }

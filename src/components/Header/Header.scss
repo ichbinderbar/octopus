@@ -49,6 +49,11 @@
     height: 2.4rem;
     margin: auto 1rem;
 
+    &:hover {
+      filter: brightness(1.1);
+      cursor: pointer;
+    }
+
     @include desktop {
       display: block;
     }
@@ -70,6 +75,7 @@
     left: 0;
     background: linear-gradient(90deg, rgb(26, 1, 75), rgb(79, 20, 171));
     font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
 
     @include desktop {
       flex-direction: row;
