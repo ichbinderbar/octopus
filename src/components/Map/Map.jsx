@@ -10,14 +10,14 @@ const Map = () => {
 
     const map = new mapboxgl.Map({
       container: "map",
-      center: [-0.1276, 51.5074],
+      center: [-3.1883, 55.9533], // Center on Edinburgh
       zoom: 1.5,
     });
 
     map.on("load", () => {
       map.flyTo({
-        center: [-0.1276, 51.5074],
-        zoom: 12,
+        center: [-3.1883, 55.9533], // Zoom into Edinburgh
+        zoom: 5,
         speed: 1.5,
       });
     });
