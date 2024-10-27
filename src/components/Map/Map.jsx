@@ -10,11 +10,17 @@ const Map = () => {
 
     const map = new mapboxgl.Map({
       container: "map",
-      center: [-0.1276, 51.5074], // Coordinates for London
-      zoom: 8,
+      center: [-0.1276, 51.5074],
+      zoom: 1.5,
     });
 
-    // Add any additional map setup code here
+    map.on("load", () => {
+      map.flyTo({
+        center: [-0.1276, 51.5074],
+        zoom: 12,
+        speed: 1.5,
+      });
+    });
 
     return () => {
       map.remove();
